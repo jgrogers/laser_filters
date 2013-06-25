@@ -59,8 +59,8 @@ target_link_libraries(generic_laser_filter_node
   laser_scan_filters)
 
 #test scan filter chain filter
-add_executable(test_scan_filter_chain EXCLUDE_FROM_ALL test/test_scan_filter_chain.cpp)
-target_link_libraries(test_scan_filter_chain laser_scan_filters)
+#add_executable(test_scan_filter_chain EXCLUDE_FROM_ALL test/test_scan_filter_chain.cpp)
+#target_link_libraries(test_scan_filter_chain laser_scan_filters)
 
 #rosbuild_add_gtest_build_flags(test_scan_filter_chain)
 #rosbuild_add_rostest(test/test_scan_filter_chain.launch)
@@ -69,7 +69,7 @@ set(EXECUTABLES
   scan_to_cloud_filter_chain
   scan_to_scan_filter_chain
   generic_laser_filter_node
-  test_scan_filter_chain
+#  test_scan_filter_chain
   )
 
 install(TARGETS ${EXECUTABLES} laser_scan_filters pointcloud_filters
